@@ -27,13 +27,13 @@
               <%= link_to "Home", root_path, class: 'fas fa-home nav-link text-light' %>
             </li>
             <li>
-              "User"
+              <%= link_to "User", user_path(current_user.id), class: "fas fa-users nav-link text-light" %>
             </li>
             <li>
-              <%= link_to "Books", books_path %>
+              <%= link_to "Books", books_path, class: "fas fa-book-open nav-link text-light" %>
             </li>
             <li>
-              <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "fas fa-sign-out-alt nav-link text-light" %>
             </li>
             <% else %>
             <li>
@@ -47,7 +47,7 @@
             </li>
             <li>
               <%= link_to "Log in", new_user_session_path, class: 'fas fa-sign-in-alt nav-link text-light' %>
-            　</li>
+            </li>
             <% end %>
             </ul>
           </div>
