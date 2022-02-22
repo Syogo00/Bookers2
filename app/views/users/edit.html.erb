@@ -5,7 +5,7 @@
             <h2>User info</h2>
             <div id="error_expalanation">
               <% if @user.errors.any? %>
-                <h3><%= @user.errors.count %>error prohibited this obj from being saved:</h3>
+                <h3><%= pluralize(@user.errors.count, "error") %> prohibited this obj from being saved:</h3>
                 <ul>
                   <% @user.errors.full_messages.each do |message| %>
                     <li><%= message %></li>
@@ -30,7 +30,7 @@
                   <%= f.text_area :introduction, class: "form-control" %>
                 </div>
                 <div class="form-group">
-                  <%= f.submit "Update user", class: "btn btn-secondary" %>
+                  <%= f.submit "Update User", class: "btn btn-secondary" %>
                 </div>
             <% end %>
         </div>

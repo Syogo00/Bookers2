@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   before_action :configure_parmitted_parameters, if: :devise_controller?
 
   def after_sign_in_path_for(resourse)
-    books_path(current_user.id)
+    user_path(current_user.id)
   end
 
   def after_sign_out_oath_for(resourse)
